@@ -74,8 +74,8 @@ class ScanService {
             body: jsonEncode({'kode_unik': cleanCode}),
           )
           .timeout(
-            const Duration(seconds: 5),
-          ); // Kita naikin jadi 5 detik biar lebih sabar
+            const Duration(seconds: 15),
+          ); // Kita naikin jadi 15 detik biar lebih sabar
 
       if (response.statusCode == 200) {
         isSyncedSuccess = true;

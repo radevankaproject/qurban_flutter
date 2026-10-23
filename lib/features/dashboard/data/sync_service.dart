@@ -46,7 +46,7 @@ class SyncService {
             },
             body: jsonEncode({'data': payload}),
           )
-          .timeout(const Duration(seconds: 15));
+          .timeout(const Duration(seconds: 30)); // Diperbesar jadi 30 detik
 
       if (response.statusCode == 200) {
         await isar.writeTxn(() async {
@@ -84,13 +84,13 @@ class SyncService {
               'Authorization': 'Bearer $token',
             },
           )
-          .timeout(const Duration(seconds: 20));
+          .timeout(const Duration(seconds: 60)); // Diperbesar jadi 60 detik untuk mencegah RTO
 
       if (response.statusCode == 200) {
         onProgress?.call(0.3, 'Mengunduh data selesai...');
 
         final data = jsonDecode(response.body);
-        final List kuponList = data['data'];
+        final List kuponList = data['data'] as List? ?? [];
         final int total = kuponList.length;
         int addedOrUpdated = 0;
 
@@ -102,7 +102,9 @@ class SyncService {
         await isar.writeTxn(() async {
           for (int i = 0; i < total; i++) {
             final item = kuponList[i];
-            final String kodeUnik = item['kode_unik'];
+            final String kodeUnik = item['kode_unik']?.toString() ?? '';
+
+            if (kodeUnik.isEmpty) continue;
 
             final localData = await isar.kuponModels
                 .where()
@@ -115,10 +117,10 @@ class SyncService {
             final kupon = KuponModel()
               ..id = localData?.id ?? Isar.autoIncrement
               ..kodeUnik = kodeUnik
-              ..nama = item['nama']
-              ..tipe = item['tipe']
-              ..keterangan = item['keterangan']
-              ..isScanned = item['status_pengambilan'] == 'Sudah'
+              ..nama = item['nama']?.toString() ?? 'Hamba Allah'
+              ..tipe = item['tipe']?.toString() ?? 'Umum'
+              ..keterangan = item['keterangan']?.toString() ?? '-'
+              ..isScanned = item['status_pengambilan']?.toString() == 'Sudah'
               ..needSync = false;
 
             await isar.kuponModels.put(kupon);

@@ -16,6 +16,15 @@ class _ScannerScreenState extends ConsumerState<ScannerScreen> {
   final MobileScannerController _cameraController = MobileScannerController(
     detectionSpeed: DetectionSpeed.noDuplicates,
     facing: CameraFacing.back,
+    // Menambahkan formats secara eksplisit membantu ML Kit mendeteksi lebih cepat
+    // terutama untuk barcode 1D seperti Code 128 yang sering gagal jika gambar kurang tajam.
+    formats: const [
+      BarcodeFormat.qrCode,
+      BarcodeFormat.code128,
+      BarcodeFormat.code39,
+      BarcodeFormat.ean13,
+      BarcodeFormat.all,
+    ],
   );
 
   final TextEditingController _manualInputController = TextEditingController();
@@ -237,6 +246,34 @@ class _ScannerScreenState extends ConsumerState<ScannerScreen> {
                     fontSize: 18,
                     letterSpacing: 2,
                   ),
+                  inputFormatters: [
+                    TextInputFormatter.withFunction((oldValue, newValue) {
+                      String newText = newValue.text.toUpperCase();
+
+                      // Jika sedang menghapus teks (backspace)
+                      if (newValue.text.length < oldValue.text.length) {
+                        return TextEditingValue(
+                          text: newText,
+                          selection: newValue.selection,
+                        );
+                      }
+
+                      // Hilangkan tanda '-' untuk mempermudah perhitungan panjang asli
+                      String cleanText = newText.replaceAll('-', '');
+
+                      // Tambahkan tanda '-' secara otomatis setelah 3 karakter pertama
+                      if (cleanText.length > 3) {
+                        newText = '${cleanText.substring(0, 3)}-${cleanText.substring(3)}';
+                      } else if (cleanText.length == 3) {
+                        newText = '$cleanText-';
+                      }
+
+                      return TextEditingValue(
+                        text: newText,
+                        selection: TextSelection.collapsed(offset: newText.length),
+                      );
+                    }),
+                  ],
                   decoration: InputDecoration(
                     hintText: 'KODE-KUPON',
                     filled: true,

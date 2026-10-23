@@ -7,6 +7,24 @@ dan proyek ini mengikuti [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ---
 
+## [v1.1.0] - 2026-10-23
+
+### ✨ Added (Fitur Baru)
+- **Multi-Format Barcode Scanner:** Menambahkan dukungan deteksi eksplisit pada `MobileScannerController` untuk format Barcode 1D (`Code 128`, `Code 39`, `EAN-13`) serta QR Code untuk mempercepat pemindaian kupon di kondisi pencahayaan kurang.
+- **Auto-Formatting Kode Kupon:** Input manual kode kupon pada modal input manual kini dilengkapi `inputFormatters` otomatis (konversi kapital otomatis dan penambahan tanda `-` setelah 3 digit pertama, misal: `KOD-EKUPON`).
+- **Android Release Signing Configuration:** Penambahan konfigurasi penandatanganan rilis APK/AAB (`signingConfigs.release`) dengan `key.properties` dan keystore `qurban_scanner.jks` di `build.gradle.kts`.
+
+### ⚡ Improved (Peningkatan & Keamanan)
+- **Peningkatan Batas Waktu Request (HTTP Timeout):**
+  - Menaikkan timeout verifikasi scan kupon ke backend dari 5 detik menjadi 15 detik.
+  - Menaikkan timeout upload sinkronisasi data offline dari 15 detik menjadi 30 detik.
+  - Menaikkan timeout unduh data sinkronisasi dari 20 detik menjadi 60 detik untuk mencegah gangguan Request Time Out (RTO).
+- **Null-Safety Data Sync:** Sanitasi dan penanganan nilai `null` yang lebih tangguh saat mapping respons API ke database lokal Isar.
+- **Keamanan File Signing:** Mendaftarkan berkas sensitif `key.properties`, `*.jks`, `*.keystore`, dan `android/build/` ke `.gitignore`.
+- **Pembaruan Lisensi:** Mengubah lisensi pada [LICENSE.md] menjadi Lisensi Proprietary / Hak Milik Mutlak RadevankaProject (@bangameck).
+
+---
+
 ## [v1.0.0] - 2026-05-12
 
 ### 🎉 Initial Release - Qurban Scanner Mobile App

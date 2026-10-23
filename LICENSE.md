@@ -1,4 +1,4 @@
-# MIT License / Lisensi MIT
+# Proprietary License / Lisensi Hak Milik
 
 **Copyright (c) 2026 RadevankaProject (@bangameck) - Qurban App**
 
@@ -6,49 +6,24 @@
 
 ## ⚠️ PERINGATAN KHUSUS / SPECIAL NOTE
 
-**Dilarang keras memperjualbelikan (menjual/membeli) salinan perangkat lunak ini tanpa izin tertulis dari RadevankaProject!** Aplikasi ini dikembangkan untuk kemaslahatan umat. Jika Anda ingin mendukung atau melakukan kerjasama komersial, silakan hubungi pengembang secara resmi.
+**Seluruh aset dan source code aplikasi ini adalah hak milik mutlak RadevankaProject (@bangameck).**
+
+Dilarang keras untuk:
+1. Memperjualbelikan (menjual/membeli) aplikasi ini beserta seluruh aset di dalamnya tanpa izin tertulis dari RadevankaProject.
+2. Mendistribusikan ulang aplikasi ini untuk tujuan komersial maupun non-komersial tanpa izin.
+3. Memodifikasi dan mengklaim aplikasi ini sebagai milik pribadi atau entitas lain.
+
+Aplikasi ini dikembangkan untuk kemaslahatan umat. Jika Anda ingin mendukung atau melakukan kerjasama komersial, silakan hubungi pengembang secara resmi.
 
 ---
 
-## 🇬🇧 English (Original MIT License)
+## 🇬🇧 English (Proprietary License)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+**All assets and source code of this application are the absolute property of RadevankaProject (@bangameck).**
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+It is strictly prohibited to:
+1. Trade (sell/buy) this application and all its assets without written permission from RadevankaProject.
+2. Redistribute this application for commercial or non-commercial purposes without permission.
+3. Modify and claim this application as the property of yourself or another entity.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
----
-
-## 🇮🇩 Bahasa Indonesia (Terjemahan Lisensi MIT)
-
-Dengan ini diberikan izin, secara gratis, kepada siapa pun yang mendapatkan salinan
-perangkat lunak ini dan file dokumentasi terkait ("Perangkat Lunak"), untuk
-berurusan dengan Perangkat Lunak tanpa batasan, termasuk namun tidak terbatas pada
-hak untuk menggunakan, menyalin, memodifikasi, menggabungkan, menerbitkan,
-mendistribusikan, mensublisensikan, dan/atau menjual salinan Perangkat Lunak, 
-dan untuk mengizinkan orang yang diberikan Perangkat Lunak ini untuk melakukannya, 
-dengan tunduk pada ketentuan berikut:
-
-Pemberitahuan hak cipta di atas dan pemberitahuan izin ini harus disertakan dalam 
-semua salinan atau bagian penting dari Perangkat Lunak.
-
-PERANGKAT LUNAK INI DISEDIAKAN "SEBAGAIMANA ADANYA", TANPA JAMINAN APA PUN, TERSURAT 
-MAUPUN TERSIRAT, TERMASUK NAMUN TIDAK TERBATAS PADA JAMINAN KELAYAKAN UNTUK 
-DIPERDAGANGKAN, KESESUAIAN UNTUK TUJUAN TERTENTU DAN TIDAK ADANYA PELANGGARAN. 
-DALAM KEADAAN APA PUN PENULIS ATAU PEMEGANG HAK CIPTA TIDAK BERTANGGUNG JAWAB ATAS 
-KLAIM, KERUSAKAN, ATAU TANGGUNG JAWAB LAINNYA, BAIK DALAM TINDAKAN KONTRAK, 
-PELANGGARAN, ATAU LAINNYA, YANG TIMBUL DARI, LUAR, ATAU SEHUBUNGAN DENGAN PERANGKAT 
-LUNAK ATAU PENGGUNAAN ATAU TRANSAKSI LAIN DALAM PERANGKAT LUNAK INI.
+This application was developed for the benefit of the ummah (community). If you wish to support or enter into commercial cooperation, please contact the developer officially.

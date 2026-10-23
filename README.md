@@ -5,7 +5,7 @@
 ![Riverpod](https://img.shields.io/badge/Riverpod-00BCD4?style=for-the-badge&logo=flutter&logoColor=white)
 ![Isar](https://img.shields.io/badge/Isar_DB-FF6B35?style=for-the-badge&logo=databricks&logoColor=white)
 
-**Qurban Scanner** adalah aplikasi mobile berbasis Flutter yang berfungsi sebagai _companion app_ resmi dari [Qurban App (Laravel Backend)](https://github.com/bangameck/qurban-app). Dirancang khusus untuk Panitia Qurban di lapangan, memungkinkan verifikasi kupon distribusi daging secara cepat, akurat, dan dapat bekerja dalam kondisi **offline**.
+**Qurban Scanner** adalah aplikasi mobile berbasis Flutter yang berfungsi sebagai _companion app_ resmi dari [Qurban App (Laravel Backend)](https://github.com/radevankaproject/qurban-app). Dirancang khusus untuk Panitia Qurban di lapangan, memungkinkan verifikasi kupon distribusi daging secara cepat, akurat, dan dapat bekerja dalam kondisi **offline**.
 
 ---
 
@@ -99,13 +99,13 @@ lib/
 
 ### Prasyarat
 - Flutter SDK **^3.11.5** sudah terinstall
-- Backend **[Laravel Qurban App](https://github.com/bangameck/qurban-app)** sudah berjalan (lokal atau server)
+- Backend **[Laravel Qurban App](https://github.com/radevankaproject/qurban-app)** sudah berjalan (lokal atau server)
 
 ### Langkah Instalasi
 
 **1. Clone Repository**
 ```bash
-git clone https://github.com/bangameck/qurban_flutter.git
+git clone https://github.com/radevankaproject/qurban_flutter.git
 cd qurban_flutter
 ```
 
